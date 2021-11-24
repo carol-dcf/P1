@@ -17,4 +17,4 @@ Instructions are reaaly clear once you are running the files, however, here's a 
 
 (All the files generated in the different exercises on the image can be seen in the Results folder)
 
-These functions have some library dependencies, if you do not have them insalled in your device, run the *dependencies.py* file.
+These functions have some library dependencies, if you do not have them installed in your device, run the *dependencies.py* file.
