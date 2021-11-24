@@ -1,7 +1,5 @@
 from scipy.fftpack import dct, idct
 import numpy as np
-import cv2
-import matplotlib.pylab as plt
 
 def dct1d(input_list):
     """
@@ -22,13 +20,9 @@ def idct1d(input_list):
 
 
 def dct2d(input_im):
-    # read RGB image and convert to grayscale
-    im = cv2.imread(input_im)
-    gray = cv2.cvtColor(im, cv2.COLOR_BGR2GRAY)
-    dct_coeff = dct(dct(gray.T, norm = 'ortho').T, norm = 'ortho')
-    return dct_coeff
+    return dct(dct(input_im.T, norm = 'ortho').T, norm = 'ortho')
 
 
 def idct2d(input_im):
-    return idct(idct(input_im, norm = 'ortho').T, norm = 'ortho')
+    return idct(idct(input_im.T, norm = 'ortho').T, norm = 'ortho')
 
